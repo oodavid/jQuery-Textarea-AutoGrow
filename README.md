@@ -1,6 +1,6 @@
 # jQuery Textarea AutoGrow
 
-Automatically grows <textarea> elements (vertically) to accommodate its content. Has a minimum and maximum height and can trigger a callback when the size changes.
+Automatically grows textarea elements (vertically) to accommodate its content. Has a minimum and maximum height and can trigger a callback when the size changes.
 
 ## Usage
 
@@ -16,4 +16,6 @@ $('textarea').autoGrow({
 
 Go to [oodavid.com/jQueryFaviconNotifier](http://oodavid.com/jQueryTextareaAutogrow/) (and read the source code).
 
-![screenshot of it in action](http://oodavid.com/jQueryFaviconNotifier/screenshot.png)
+![Just grow](https://raw.githubusercontent.com/oodavid/jQuery-Textarea-Autogrow/master/grow.gif)
+
+![Using the callback](https://raw.githubusercontent.com/oodavid/jQuery-Textarea-Autogrow/master/callback.gif)
