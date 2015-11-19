@@ -14,8 +14,6 @@ $('textarea').autoGrow({
 
 ## Demo
 
-Go to [oodavid.com/jQueryFaviconNotifier](http://oodavid.com/jQueryTextareaAutogrow/) (and read the source code).
-
 ![Just grow](https://raw.githubusercontent.com/oodavid/jQuery-Textarea-Autogrow/master/grow.gif)
 
 ![Using the callback](https://raw.githubusercontent.com/oodavid/jQuery-Textarea-Autogrow/master/callback.gif)
