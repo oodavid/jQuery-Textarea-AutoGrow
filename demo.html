@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>jQuery Textarea AutoGrow - Demo Page</title>
+    <style>
+      html { font-family: sans-serif; }
+      textarea { padding: 5px; width: 200px; font-size: inherit; border: 1px solid #AAAAAA; outline: none; }
+      #shrink  { padding: 6px; width: 200px; background-color: #ABCDEF; overflow-x: hidden; overflow-y: auto; }
+    </style>
+  </head>
+  <body>
+    <h1>Just grow</h1>
+    <textarea id="textarea1"></textarea>
+    <br><br><br><br><br><br><br><br><br>
+    <h1>With callback</h1>
+    <div id="shrink">
+      <p>The callback function makes this area shrink, thus keeping the total height static.</p>
+      <p>Could be useful for forms of a static size, for example a Facebook style chat.</p>
+    </div>
+    <textarea id="textarea2"></textarea>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="./jquery.textareaAutoGrow.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#textarea1').autoGrow({ minHeight: 30, maxHeight: 120 });
+        function doShrink(e){
+          var h = 200 - parseInt($(this).css('height'), 10);
+          $('#shrink').height(h);
+        }
+        $('#textarea2').autoGrow({ minHeight: 30, maxHeight: 120, callback: doShrink });
+      });
+    </script>
+  </body>
+</html>
