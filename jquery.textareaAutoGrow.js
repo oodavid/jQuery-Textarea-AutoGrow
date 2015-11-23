@@ -36,14 +36,14 @@
 		function autoSize(e, $this, $clone, opts) {
 			$clone.css('width', $this.css('width')); // Update the clone width, it may have changed
 			$clone.html(escapeHTML($this.val())+'<br />'); // Copy the textarea contents into the clone element - the browser calculates the height
-			var oldH = parseInt($this.css('height'), 10); // Store the current height
-			var h = parseInt($clone.css('height'), 10); // Grab the recalculated height
-			h = Math.max(opts.minHeight, Math.min(h, opts.maxHeight)); // Restrict within min / max
+			var oldHeight = parseInt($this.css('height'), 10);  // Store the current (old) height
+			var newHeight = parseInt($clone.css('height'), 10); // Grab the recalculated (new) height
+			newHeight = Math.max(opts.minHeight, Math.min(newHeight, opts.maxHeight)); // Restrict within min / max
 			// If there's a change in height, update and trigger the callback
-			if(oldH != h){
-				$this.css('height', h);
+			if(oldHeight != newHeight){
+				$this.css('height', newHeight);
 				if(opts.callback){
-					opts.callback.call($this, e);
+					opts.callback.call($this, e, newHeight, oldHeight);
 				}
 			}
 		}
