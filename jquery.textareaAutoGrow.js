@@ -39,8 +39,8 @@
 			var oldHeight = parseInt($this.css('height'), 10);  // Store the current (old) height
 			var newHeight = parseInt($clone.css('height'), 10); // Grab the recalculated (new) height
 			newHeight = Math.max(opts.minHeight, Math.min(newHeight, opts.maxHeight)); // Restrict within min / max
-			// If there's a change in height, update and trigger the callback
-			if(oldHeight != newHeight){
+			// If there's a change in height, or the event was triggered manually, update and fire the callback
+			if(oldHeight != newHeight || !e || e.originalEvent === undefined){
 				$this.css('height', newHeight);
 				if(opts.callback){
 					opts.callback.call($this, e, newHeight, oldHeight);
