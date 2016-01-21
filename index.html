@@ -1,0 +1,19 @@
+---
+layout: default
+title: "jQuery Textarea AutoGrow"
+github: https://github.com/oodavid/jQuery-Textarea-AutoGrow
+scripts:
+- ./jquery.textareaAutoGrow.js
+- ./demo.js
+---
+<h1>{{page.title}}</h1>
+<p>A tiny jQuery plugin to auto-grow textarea elements.</p>
+<p>For documentation and sources see <a target="_blank" href="https://github.com/oodavid/jQuery-Textarea-AutoGrow">jQuery-Textarea-AutoGrow on github</a>.</p>
+<h2>Demo <small>just grow</small></h2>
+<textarea id="textarea1"></textarea>
+<h2>Demo <small>grow with callback</small></h2>
+<div id="shrink" style="padding: 6px; width: 200px; background-color: #ABCDEF; overflow-x: hidden; overflow-y: auto;">
+  <p>The callback function makes this area shrink, thus keeping the total height static.</p>
+  <p>Could be useful for forms of a static size, for example a Facebook style chat.</p>
+</div>
+<textarea id="textarea2"></textarea>
